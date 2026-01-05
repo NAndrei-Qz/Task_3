@@ -30,7 +30,7 @@ class OrderListPage(BasePage):
     
     @allure.step('Нажатие на карточку заказа')
     def click_on_order_card(self):
-        return self.click_on_element(OrderListPageLocators.ORDER_CARD, self.browser)
+        self.click_on_element(OrderListPageLocators.ORDER_CARD, self.browser)
     
     @allure.step('Ожидание видимости кнопки закрытия карточки заказа')
     def wait_visibility_close_card_button(self):

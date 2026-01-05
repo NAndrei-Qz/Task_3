@@ -17,11 +17,11 @@ class BasePage:
             self.browser.find_element(*locator).click()
         elif 'firefox' in str(browser_name):
             element = self.browser.find_element(*locator)
-            return self.browser.execute_script("arguments[0].click();", element)
+            self.browser.execute_script("arguments[0].click();", element)
 
     @allure.step('Ввод данных в поле "{locator}": {keys}')
     def send_keys_to_input(self, locator, keys):
-        return self.browser.find_element(*locator).send_keys(keys)
+        self.browser.find_element(*locator).send_keys(keys)
 
     @allure.step('Скроллинг страницы до элемента "{locator}"')
     def scrolling_to_element(self, locator):

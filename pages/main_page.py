@@ -14,7 +14,7 @@ class MainPage(BasePage):
 
     @allure.step('Нажатие на кнопку "Личный кабинет"')
     def click_on_login_button(self):
-        return self.click_on_element(MainPageLocators.ACCOUNT_BUTTON, self.browser)
+        self.click_on_element(MainPageLocators.ACCOUNT_BUTTON, self.browser)
 
     @allure.step('Ожидание кликабельности кнопки "Конструктор"')
     def wait_clickable_constructor_button(self):
@@ -22,7 +22,7 @@ class MainPage(BasePage):
 
     @allure.step('Нажатие на кнопку "Конструктор"')
     def click_on_constructor_button(self):
-        return self.click_on_element(MainPageLocators.CONSTRUCTOR_BUTTON, self.browser)
+        self.click_on_element(MainPageLocators.CONSTRUCTOR_BUTTON, self.browser)
 
     @allure.step('Ожидание кликабельности кнопки "Оформить заказ"')
     def wait_clickable_order_button(self):
@@ -30,7 +30,7 @@ class MainPage(BasePage):
 
     @allure.step('Нажатие на кнопку "Оформить заказ"')
     def click_on_order_button(self):
-        return self.click_on_element(MainPageLocators.CREATE_ORDER_BUTTON, self.browser)
+        self.click_on_element(MainPageLocators.CREATE_ORDER_BUTTON, self.browser)
 
     @allure.step('Ожидание кликабельности кнопки "Лента Заказов"')
     def wait_clickable_order_list(self):
@@ -38,7 +38,7 @@ class MainPage(BasePage):
 
     @allure.step('Нажатие на кнопку "Лента Заказов"')
     def click_on_order_list(self):
-        return self.click_on_element(MainPageLocators.ORDER_LIST_BUTTON, self.browser)
+        self.click_on_element(MainPageLocators.ORDER_LIST_BUTTON, self.browser)
 
     @allure.step('Ожидание кликабельности изображения ингредиента')
     def wait_clickable_ingredient(self):
@@ -46,7 +46,7 @@ class MainPage(BasePage):
 
     @allure.step('Открытие карточки ингредиента путём нажатия на ингредиент')
     def click_on_ingredient_card(self):
-        return self.click_on_element(MainPageLocators.CRATOR_BUN_BUTTON, self.browser)
+        self.click_on_element(MainPageLocators.CRATOR_BUN_BUTTON, self.browser)
 
     @allure.step('Ожидание кликабельности кнопки закрытия карточки ингредиента')
     def wait_clickable_close_symbol(self):
@@ -54,7 +54,7 @@ class MainPage(BasePage):
 
     @allure.step('Нажатие на кнопку "Крестик" в деталях ингредиента')
     def click_close_symbol(self):
-        return self.click_on_element(MainPageLocators.CLOSE_BUN_DETAILS_BUTTON, self.browser)
+        self.click_on_element(MainPageLocators.CLOSE_BUN_DETAILS_BUTTON, self.browser)
     
     @allure.step('Ожидание кликабельности кнопки закрытия карточки ингредиента')
     def wait_clickable_sauce_button(self):

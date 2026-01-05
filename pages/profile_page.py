@@ -13,7 +13,7 @@ class ProfilePage(BasePage):
     
     @allure.step('Нажатие на кнопку "Выход"')
     def click_on_exit_button(self):
-        return self.click_on_element(ProfilePageLocators.LOGOUT_BUTTON, self.browser)
+        self.click_on_element(ProfilePageLocators.LOGOUT_BUTTON, self.browser)
     
     @allure.step('Ожидание кликабельности кнопки "История заказов"')
     def wait_clickable_orders_history(self):
@@ -21,6 +21,6 @@ class ProfilePage(BasePage):
     
     @allure.step('Нажатие на кнопку "История заказов"')
     def click_on_orders_history(self):
-        return self.click_on_element(ProfilePageLocators.ORDER_HISTORY_BUTTON, self.browser)
+        self.click_on_element(ProfilePageLocators.ORDER_HISTORY_BUTTON, self.browser)
     
     

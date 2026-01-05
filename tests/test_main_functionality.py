@@ -2,6 +2,7 @@ import allure
 from url import Url
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
+from pages.order_list_page import OrderListPage
 
 class TestMainFunctionality:
     @allure.title('Проверка перехода на главную страницу по клику на «Конструктор»')
@@ -14,7 +15,8 @@ class TestMainFunctionality:
         main_page.click_on_login_button()
         login_page.wait_clickable_enter_button()
         main_page.click_on_constructor_button()
-        assert browser.current_url == Url.MAIN_PAGE
+        current_url = main_page.get_current_url()
+        assert current_url == Url.MAIN_PAGE
 
     @allure.title('Проверка перехода на страницу с заказами по клику на «Лента заказов»')
     @allure.description('Осуществляется переход на страницу авторизации, нажимается кнопка "Лента заказов",'
@@ -22,11 +24,13 @@ class TestMainFunctionality:
     def test_redirect_to_order_list(self, browser, open_login_page):
         main_page = MainPage(browser)
         login_page = LoginPage(browser)
+        order_list_page = OrderListPage(browser)
         main_page.wait_clickable_login_button()
         main_page.click_on_login_button()
         login_page.wait_clickable_enter_button()
         main_page.click_on_order_list()
-        assert browser.current_url == Url.ORDER_LIST_PAGE
+        current_url = order_list_page.get_current_url()
+        assert current_url == Url.ORDER_LIST_PAGE
 
     @allure.title('Проверка открытия всплывающего окна с деталями ингредиента')
     @allure.description('Осуществляется переход на главную страницу, происходит нажатие на ингредиент "Краторная булка N-200i",'

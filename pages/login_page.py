@@ -23,7 +23,7 @@ class LoginPage(BasePage):
     
     @allure.step('Нажатие на кнопку "Восстановить пароль"')
     def click_on_recovery_password_button(self):
-        return self.click_on_element(LoginPageLocators.FORGOT_PASSWORD_BUTTON, self.browser)
+        self.click_on_element(LoginPageLocators.FORGOT_PASSWORD_BUTTON, self.browser)
     
     allure.step('Вход в аккаунт')
     def login_to_account(self):
